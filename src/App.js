@@ -100,7 +100,7 @@ class App extends Component {
     if(this.state.persons.length <= 1){
       assignedClasses.push(classes.bold);
     }
-    
+
     return (
         <div className={classes.App}>
         
