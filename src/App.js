@@ -5,6 +5,8 @@ import Person from './Person/Person';
 class App extends Component {
   // state can only be accessed in class-based components!
 
+  // ************************* STATE *****************************
+
   state = {
     persons: [
       {id: 'asfa1', name: 'Max', age: '28'},
@@ -15,6 +17,7 @@ class App extends Component {
     showPersons: false
   }
 
+  // ******************* FUNCTIONS *********************************
   nameChangeHandler = (event, id) => {
             const personIndex = this.state.persons.findIndex(p => {
               return p.id === id;
@@ -49,6 +52,7 @@ class App extends Component {
       );
   }
 
+  // *************** RENDER ***********************************
   render() {
     // Needs to be implemented in class-based components! Needs to return some JSX!
 
@@ -82,6 +86,8 @@ class App extends Component {
       assignedClasses.push(classes.bold);
     }
 
+  // ***************** RETURN *************************************
+
     return (
         <div className={classes.App}>
         
@@ -98,8 +104,10 @@ class App extends Component {
         
         </div>
     );
+    // ***************** RETURN ENDS *******************************
     // return React.createElement('div',null,React.createElement('h1',{className: 'App'},'Hi! I\'m a React App!!!'));
   }
+  // ***************** RENDER ENDS ************************************
 }
 
 export default App;
