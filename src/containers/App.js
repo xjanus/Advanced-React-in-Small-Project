@@ -8,7 +8,7 @@ import Cockpit from '../components/Cockpit/Cockpit';
 class App extends Component {
   // state can only be accessed in class-based components!
 
-  //************ COMPONENT CREATION LIFECYCLE**********/
+  //************ COMPONENT CREATION LIFECYCLE **********/
       constructor(props){
         super(props);
         console.log('[App.js] constructor');
