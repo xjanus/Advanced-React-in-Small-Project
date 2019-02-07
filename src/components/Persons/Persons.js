@@ -53,4 +53,4 @@ componentDidUpdate(prevProps, prevState, snapshot){
 
 } 
 
-      export default Persons;
+export default Persons;

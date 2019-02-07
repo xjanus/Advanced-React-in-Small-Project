@@ -113,6 +113,19 @@ class App extends Component {
     console.log('[App.js] componentDidMount');
   }
   //*****************************************************/
+
+//************ COMPONENT UPDATE LIFECYCLE FOR STATE CHANGES**********/
+
+shouldComponentUpdate(nextProps, nextState){
+  console.log('[App.js] shouldComponentUpdate');
+  return true;
+  //using undefined or false will not allow Persons component to be rendered.
+}
+
+componentDidUpdate(){
+  console.log('[App.js] componentDidUpdate');
+}
+//*****************************************************/
 }
 
 export default App;
