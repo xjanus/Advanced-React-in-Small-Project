@@ -71,7 +71,7 @@ class App extends Component {
   render() {
     // Needs to be implemented in class-based components! Needs to return some JSX!
 
-     //************ COMPONENT CREATION LIFECYCLE**********/
+    //************ COMPONENT CREATION LIFECYCLE**********/
      console.log('[App.js] render');
     //*****************************************************/
 
