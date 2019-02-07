@@ -2,6 +2,11 @@ import React from 'react';
 import classes from './Person.css';
 
 const person = (props) => {
+   
+    //************ COMPONENT CREATION LIFECYCLE**********/
+     console.log('[Person.js] rendering...');
+    //*****************************************************/
+
     return(
         <div className={classes.Person}>
             

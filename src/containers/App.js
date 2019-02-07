@@ -8,6 +8,12 @@ import Cockpit from '../components/Cockpit/Cockpit';
 class App extends Component {
   // state can only be accessed in class-based components!
 
+  //************ COMPONENT CREATION LIFECYCLE**********/
+      constructor(props){
+        super(props);
+        console.log('[App.js] constructor');
+      }
+  //*****************************************************/
   // ******************* STATE *****************************
 
   state = {
@@ -20,6 +26,12 @@ class App extends Component {
     showPersons: false
   }
 
+  //************ COMPONENT CREATION LIFECYCLE**********/
+  static getDerivedStateFromProps(props, state){
+    console.log('[App.js] getDerivedStateFromProps', props);
+    return state;
+  }
+  //*****************************************************/
   // ******************* FUNCTIONS *********************************
   nameChangeHandler = (event, id) => {
             const personIndex = this.state.persons.findIndex(p => {
@@ -59,6 +71,10 @@ class App extends Component {
   render() {
     // Needs to be implemented in class-based components! Needs to return some JSX!
 
+     //************ COMPONENT CREATION LIFECYCLE**********/
+     console.log('[App.js] render');
+    //*****************************************************/
+
     let persons = null;    
 
     if(this.state.showPersons) {  
@@ -91,6 +107,12 @@ class App extends Component {
     // return React.createElement('div',null,React.createElement('h1',{className: 'App'},'Hi! I\'m a React App!!!'));
   }
   // ***************** RENDER ENDS ************************************
+
+  //************ COMPONENT CREATION LIFECYCLE**********/
+  componentDidMount(){
+    console.log('[App.js] componentDidMount');
+  }
+  //*****************************************************/
 }
 
 export default App;
