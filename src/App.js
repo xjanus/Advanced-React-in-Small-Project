@@ -76,21 +76,23 @@ class App extends Component {
 
     let persons = null;
 
-    if(this.state.showPersons) {
+    if(this.state.showPersons) 
+    {
+      style.backgroundColor = 'red';
       
       persons = (
-      <div>
-            {this.state.persons.map((person, index) => {
-              return <Person 
-                click = {this.deletePersonHandler.bind(this, index)}
-                name  = {person.name} 
-                age   = {person.age}
-                key = {person.id}
-                changed = {(event) => this.nameChangeHandler(event, person.id)} />
-            })}
-      </div>
-      );
-      style.backgroundColor = 'red';
+          <div>
+                {this.state.persons.map((person, index) => {
+                  return <Person 
+                    click = {this.deletePersonHandler.bind(this, index)}
+                    name  = {person.name} 
+                    age   = {person.age}
+                    key = {person.id}
+                    changed = {(event) => this.nameChangeHandler(event, person.id)} />
+                })
+                }
+          </div>
+              );
       }
 
     const assignedClasses = [];
