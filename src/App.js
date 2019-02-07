@@ -29,23 +29,23 @@ class App extends Component {
 
 
   nameChangeHandler = (event, id) => {
-    const personIndex = this.state.persons.findIndex(p => {
-      return p.id === id;
-    });
+            const personIndex = this.state.persons.findIndex(p => {
+              return p.id === id;
+            });
 
-    //const person = Object.assign({}, this.state.persons[personIndex]);
+            //const person = Object.assign({}, this.state.persons[personIndex]);
 
-    const person = {
-      ...this.state.persons[personIndex]
-    };
+            const person = {
+              ...this.state.persons[personIndex]
+            };
 
-    person.name = event.target.value;
+            person.name = event.target.value;
 
-    const persons = [...this.state.persons];
-    persons[personIndex] = person;
+            const persons = [...this.state.persons];
+            persons[personIndex] = person;
 
-    this.setState( {persons: persons});
-  }
+            this.setState( {persons: persons});
+    }
 
   deletePersonHandler = (personIndexValue) => {
     //const persons = this.state.persons.slice(); for new array
