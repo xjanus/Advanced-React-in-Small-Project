@@ -5,7 +5,7 @@ import Person from './Person/Person';
 class App extends Component {
   // state can only be accessed in class-based components!
 
-  // ************************* STATE *****************************
+  // ******************* STATE *****************************
 
   state = {
     persons: [
