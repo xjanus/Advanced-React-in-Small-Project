@@ -8,12 +8,23 @@ import Person from './Person/Person'
 
 class Persons extends Component{
 
-  //************ COMPONENT CREATION LIFECYCLE**********/
-    static getDerivedStateFromProps(props, state){
-      console.log('[Persons.js] getDerivedStateFromProps', props);
-      return state;
-    }
-  //*****************************************************/
+//************ COMPONENT UPDATE LIFECYCLE**********/
+    // static getDerivedStateFromProps(props, state){
+    //   console.log('[Persons.js] getDerivedStateFromProps');
+    //   return state;
+    // }
+
+  shouldComponentUpdate(nextProps, nextState){
+    console.log('[Persons.js] shouldComponentUpdate');
+    return true;
+  }
+
+  getSnapshotBeforeUpdate(prevProps, prevState){
+    console.log('[Persons.js] getSnapshotBeforeUpdate');
+    return {message: 'Snapshot!'};
+
+  }
+//*****************************************************/
   
   render(){
   
@@ -34,6 +45,13 @@ class Persons extends Component{
   });
 
   }
+//************ COMPONENT UPDATE LIFECYCLE**********/
+componentDidUpdate(prevProps, prevState, snapshot){
+  console.log('[Persons.js] componentDidUpdate');
+  console.log(snapshot, 'output from componentDidUpdate');
+}
+//*****************************************************/
+
 } 
 
       export default Persons;
