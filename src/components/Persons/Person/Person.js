@@ -1,27 +1,32 @@
-import React from 'react';
+import React, {Component} from 'react';
 import classes from './Person.css';
 
-const person = (props) => {
-   
-    //************ COMPONENT CREATION LIFECYCLE**********/
-     console.log('[Person.js] rendering...');
-    //*****************************************************/
+class Person extends Component {
 
-    return(
-        <div className={classes.Person}>
-            
-            <p onClick={props.click}>
-            I'm a {props.name}. 
-            I am {props.age} years old.
-            </p>
-            
-            <p>{props.children}</p>
-            
-            <input type="text" onChange={props.changed} value={props.name}>
-            </input>
+    render(){
 
-        </div>
-    );
-};
+         //************ COMPONENT CREATION LIFECYCLE**********/
+            console.log('[Person.js] rendering...');
+        //*****************************************************/
 
-export default person;
+        return(
+            <div className={classes.Person}>
+                
+                <p onClick={this.props.click}>
+                I'm a {this.props.name}. 
+                I am {this.props.age} years old.
+                </p>
+                
+                <p>{this.props.children}</p>
+                
+                <input type="text" 
+                onChange={this.props.changed} 
+                value={this.props.name}>
+                </input>
+    
+            </div>
+        );
+    }
+}
+
+export default Person;
