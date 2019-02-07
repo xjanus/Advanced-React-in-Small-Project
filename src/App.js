@@ -15,19 +15,6 @@ class App extends Component {
     showPersons: false
   }
 
-  // switchNameHandler = (newName) => {//this refers to class App because of arrow function
-  //   //DONT TO THIS: this.state.persons[0].name = 'Maximillian';
-  //   //persons object is merged and updated/replaced to the following persons object
-  //   this.setState( {
-  //     persons: [
-  //     {name: newName, age: '28'},
-  //     {name: 'Manu', age: '29'},
-  //     {name: 'Stephanie', age: '28'}
-  //   ]
-  // })
-  // };
-
-
   nameChangeHandler = (event, id) => {
             const personIndex = this.state.persons.findIndex(p => {
               return p.id === id;
