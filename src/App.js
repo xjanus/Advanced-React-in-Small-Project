@@ -51,22 +51,10 @@ class App extends Component {
 
   render() {
     // Needs to be implemented in class-based components! Needs to return some JSX!
-    
-    const style = {
-      backgroundColor: 'green',
-      color: 'white',
-      font: 'inherit',
-      border: '1px solid blue',
-      padding: '8px',
-      cursor: 'pointer'
-    };
 
     let persons = null;
 
-    if(this.state.showPersons) 
-    {
-      style.backgroundColor = 'red';
-      
+    if(this.state.showPersons) {    
       persons = (
           <div>
                 {this.state.persons.map((person, index) => {
@@ -97,7 +85,6 @@ class App extends Component {
           <p className={assignedClasses.join(' ')}>This is really working!!!</p>
           
           <button 
-            style = {style}
             onClick={this.togglePersonsHandler}>
             Toggle Persons
           </button>
