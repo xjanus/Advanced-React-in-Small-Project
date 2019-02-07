@@ -3,6 +3,8 @@ import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
 
+// this refers to App class. this and props are used in class based components.
+
 class App extends Component {
   // state can only be accessed in class-based components!
 
@@ -76,6 +78,7 @@ class App extends Component {
         <div className={classes.App}>
         
           <Cockpit 
+            title={this.props.appTitle}
             showPersons={this.state.showPersons} 
             persons={this.state.persons}
             clicked={this.togglePersonsHandler} />
