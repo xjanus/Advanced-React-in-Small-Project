@@ -7,11 +7,19 @@ import classes from './Cockpit.css'
 
 const cockpit = (props) => {
 
-  //useEffect React Hook takes a function as default that 
-  //will run for every render cycle
+  //useEffect is a React Hook that takes a default function that 
+  //will run for every render cycle ofthe Cockpit.js
+  //hence, useEffect basically functions as componentDidMount 
+  //and componentDidUpdate together
+
 
   useEffect(() => {
     console.log('[Cockpit.js] useEffect');
+    //HTTP request...
+    
+    setTimeout(() => {
+      alert('Saved data to cloud!');
+    }, 1000);
   });
 
     const assignedClasses = [];
