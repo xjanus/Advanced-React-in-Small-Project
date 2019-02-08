@@ -12,7 +12,9 @@ const cockpit = (props) => {
   //hence, useEffect basically functions as componentDidMount 
   //and componentDidUpdate together
 
+  //
 
+//we only want to run useEffect here when our persons changed
   useEffect(() => {
     console.log('[Cockpit.js] useEffect');
     //HTTP request...
@@ -20,7 +22,9 @@ const cockpit = (props) => {
     setTimeout(() => {
       alert('Saved data to cloud!');
     }, 1000);
-  });
+  }, [props.persons]);
+
+  //you can use useEffect more if you want different effects on different data change
 
     const assignedClasses = [];
     let btnClass = "";
