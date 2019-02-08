@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import classes from './Cockpit.css'
 
@@ -6,6 +6,13 @@ import classes from './Cockpit.css'
 //props.persons is this.state.persons
 
 const cockpit = (props) => {
+
+  //useEffect React Hook takes a function as default that 
+  //will run for every render cycle
+
+  useEffect(() => {
+    console.log('[Cockpit.js] useEffect');
+  });
 
     const assignedClasses = [];
     let btnClass = "";
