@@ -32,6 +32,11 @@ class Person extends Component {
     }
 }
 
-Person.PropTypes = {};
+Person.PropTypes = {
+    click: PropTypes.func,
+    name: PropTypes.string,
+    age: PropTypes.number,
+    change: PropTypes.func
+};
 
 export default withClass(Person, classes.Person);
