@@ -47,14 +47,15 @@ const cockpit = (props) => {
   //useEffect function runs, but AFTER the first render cycle!
   useEffect(() => {
     console.log('[Cockpit.js], useEffect');    
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       console.log('[Cockpit.js], for clean-up');
     }, 1000);
     return () => {
+      clearTimeout(timer);
       console.log("[Cockpit.js], clean-up work using useEffect()");
     }
   }, []);
-  
+
   //the below useEffect is useful if you want to cancel whenever the component
   //is re-rendered or updated
   useEffect(() => {
