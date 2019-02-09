@@ -9,6 +9,7 @@ import Person from './Person/Person'
 class Persons extends Component{
 
 //************ COMPONENT UPDATE LIFECYCLE**********/
+    
     // static getDerivedStateFromProps(props, state){
     //   console.log('[Persons.js] getDerivedStateFromProps');
     //   return state;
@@ -22,6 +23,11 @@ class Persons extends Component{
   getSnapshotBeforeUpdate(prevProps, prevState){
     console.log('[Persons.js] getSnapshotBeforeUpdate');
     return {message: 'Snapshot!'};
+  }
+
+  //for clean up
+  componentWillUnmount(){
+    console.log("[Persons.js], componentWillUnmount for clean-up");
   }
 //*****************************************************/
   

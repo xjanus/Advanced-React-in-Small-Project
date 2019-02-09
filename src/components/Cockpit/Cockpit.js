@@ -21,7 +21,7 @@ const cockpit = (props) => {
     //HTTP request...
     
     setTimeout(() => {
-      alert('Saved data to cloud!');
+      console.log('Saved data to cloud!');
     }, 1000);
   }, [props.persons]);
 
@@ -36,13 +36,14 @@ const cockpit = (props) => {
   //and therefore useEffect can never re-run. It will therefore only run for
   //the first time. That is the default. But it will never run again.
   useEffect(() => {
-    console.log('[Cockpit.js] useEffect');
-    //HTTP request...
-    
+    console.log('[Cockpit.js], useEffect');    
     setTimeout(() => {
-      alert('Saved data to cloud and run only the first time!');
+      console.log('Saved data to cloud and run only the first time!');
     }, 1000);
   }, []);
+
+  //useEffect for clean-up like componentWillUnmount()}{}
+  
 
     const assignedClasses = [];
     let btnClass = "";

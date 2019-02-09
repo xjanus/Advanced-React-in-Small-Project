@@ -5,9 +5,9 @@ class Person extends Component {
 
     render(){
 
-         //************ COMPONENT CREATION LIFECYCLE**********/
-            console.log('[Person.js] rendering...');
-        //*****************************************************/
+    //************ COMPONENT CREATION LIFECYCLE**********/
+        console.log('[Person.js] rendering...');
+    //*****************************************************/
 
         return(
             <div className={classes.Person}>
