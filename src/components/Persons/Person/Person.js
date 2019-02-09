@@ -36,6 +36,11 @@ class Person extends Component {
             </withClass>
         );
     }
+
+    componentDidMount() {
+        console.log("[Person.js], componentDidMount");
+        this.inputElementRef.current.focus();
+    }
 }
 
 Person.propTypes = {
@@ -44,9 +49,5 @@ Person.propTypes = {
     age: PropTypes.number,
     change: PropTypes.func
 };
-
-componentDidMount(){
-    this.inputElementRef.current.focus();
-}
 
 export default withClass(Person, classes.Person);
