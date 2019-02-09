@@ -1,4 +1,6 @@
 import React, {Component, Fragment} from 'react';
+import PropTypes from 'prop-types';
+import withClass from '../../../hoc/withClass'
 import classes from './Person.css';
 
 class Person extends Component {
@@ -10,8 +12,7 @@ class Person extends Component {
     //*****************************************************/
 
         return (
-            // <Aux>
-            <Fragment>
+            <withClass>
                 
                 <p onClick={this.props.click}>
                     I'm a {this.props.name}. 
@@ -26,11 +27,11 @@ class Person extends Component {
                     value={this.props.name}>
                 </input>
 
-            </Fragment>
-    
-            //</Aux>
+            </withClass>
         );
     }
 }
 
-export default Person;
+Person.PropTypes = {};
+
+export default withClass(Person, classes.Person);

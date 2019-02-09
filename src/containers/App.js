@@ -26,7 +26,8 @@ class App extends Component {
     ],
     otherState: 'some random value',
     showPersons: false,
-    showCockpit: true
+    showCockpit: true,
+    changeCounter: 0
   }
 
   //************ COMPONENT CREATION LIFECYCLE**********/
@@ -52,8 +53,14 @@ class App extends Component {
             const persons = [...this.state.persons];
             persons[personIndex] = person;
 
-            this.setState( {persons: persons});
-    }
+            //Best practice for states that depends on the previous or old states like counter
+            this.setState((prevState, props) => {
+              return {
+                persons: persons,
+              changeCounter: prevState.changeCounter + 1
+            };
+          });
+    };
 
   deletePersonHandler = (personIndexValue) => {
     //const persons = this.state.persons.slice(); for new array
