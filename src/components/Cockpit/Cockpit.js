@@ -15,6 +15,7 @@ const cockpit = (props) => {
   //
 
 //we only want to run useEffect here when our persons changed
+//for that we add a second argument [props.persons].
   useEffect(() => {
     console.log('[Cockpit.js] useEffect');
     //HTTP request...
@@ -24,7 +25,24 @@ const cockpit = (props) => {
     }, 1000);
   }, [props.persons]);
 
-  //you can use useEffect more if you want different effects on different data change
+  //you can use useEffect more if you want different effects on different 
+  //data change
+
+  //useEffect executes only when the component renders the first time
+  //to do that pass an empty array.
+  //This tell React, this useEffect method has no dependencies and it 
+  //should re-run whenever one of the dependencies changes.
+  //Now, since we have no dependencies, then, they can never change.
+  //and therefore useEffect can never re-run. It will therefore only run for
+  //the first time. That is the default. But it will never run again.
+  useEffect(() => {
+    console.log('[Cockpit.js] useEffect');
+    //HTTP request...
+    
+    setTimeout(() => {
+      alert('Saved data to cloud and run only the first time!');
+    }, 1000);
+  }, []);
 
     const assignedClasses = [];
     let btnClass = "";
