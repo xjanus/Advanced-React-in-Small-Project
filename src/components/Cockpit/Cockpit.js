@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef} from 'react';
 
 import classes from './Cockpit.css';
 
@@ -7,6 +7,9 @@ import classes from './Cockpit.css';
 
 const cockpit = (props) => {
 
+  const toggleButtonRef = useRef(null);
+
+  //useEffect runs after every render cycle!!
   //useEffect is a React Hook that takes a default function that 
   //will run for every render cycle ofthe Cockpit.js
   //hence, useEffect basically functions as componentDidMount 
@@ -61,6 +64,13 @@ const cockpit = (props) => {
     };
   });
 
+  useEffect(() => {
+    toggleButtonRef.current.click();
+    return () => {
+      console.log('[Cockpit.js] toggleButtonRef');
+    }
+    }, []);
+
     const assignedClasses = [];
     let btnClass = "";
 
@@ -86,7 +96,8 @@ const cockpit = (props) => {
           
             <button 
                 className={btnClass}
-                onClick={props.clicked}>
+                onClick={props.clicked}
+                ref={toggleButtonRef}>
                 Toggle Persons
             </button>
 
