@@ -93,7 +93,7 @@ class App extends Component {
   // ***************** RETURN *************************************
 
     return (
-        <withClass classes={classes.App}>
+      <withClass classes={classes.App}>
 
           <button onClick={() => {
             this.setState({showCockpit: false})

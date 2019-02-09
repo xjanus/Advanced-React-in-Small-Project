@@ -7,3 +7,4 @@ const withClass = props => {
 }
 
 export default withClass;
+
