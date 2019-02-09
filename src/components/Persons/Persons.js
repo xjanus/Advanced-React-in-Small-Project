@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
 
 import Person from './Person/Person'
 
@@ -6,7 +6,7 @@ import Person from './Person/Person'
 //props.clicked is - this.deletePersonHandler - function reference
 //props.changed is - this.nameChangeHandler - function reference
 
-class Persons extends Component{
+class Persons extends PureComponent{
 
 //************ COMPONENT UPDATE LIFECYCLE**********/
     
@@ -15,14 +15,22 @@ class Persons extends Component{
     //   return state;
     // }
 
-  shouldComponentUpdate(nextProps, nextState){
-    console.log('[Persons.js] shouldComponentUpdate');
-    if(nextProps.persons !== this.props.persons){
-      return true;
-    } else {
-      return false;
-    }
-  }
+  //there's another way as opposed to below to check whether any of all the props changed.
+  //The solution is PureComponent - it basically is shouldComponentUpdate(){}
+  //which checks for all props and doesn't render without change in props.
+
+  // shouldComponentUpdate(nextProps, nextState){
+  //   console.log('[Persons.js] shouldComponentUpdate');
+  //   if(
+  //     nextProps.persons !== this.props.persons ||
+  //     nextProps.changed !== this.props.changed ||
+  //     nextProps.clicked !== this.props.clicked
+  //     ){
+  //     return true;
+  //   } else {
+  //     return false;
+  //   }
+  // }
 
   getSnapshotBeforeUpdate(prevProps, prevState){
     console.log('[Persons.js] getSnapshotBeforeUpdate');
