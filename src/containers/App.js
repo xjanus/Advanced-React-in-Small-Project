@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import classes from './App.css';
 import Persons from '../components/Persons/Persons';
 import Cockpit from '../components/Cockpit/Cockpit';
-import withClass from '../hoc/WithClass'
+import withClass from '../hoc/withClass'
+import Aux from '../hoc/Auxilliary'
 
 // this refers to App class. this and props are used in class based components.
 
@@ -93,7 +94,7 @@ class App extends Component {
   // ***************** RETURN *************************************
 
     return (
-      <withClass classes={classes.App}>
+      <Aux>
 
           <button onClick={() => {
             this.setState({showCockpit: false})
@@ -113,7 +114,7 @@ class App extends Component {
 
           {persons}
         
-        </withClass>
+        </Aux>
     );
     // ***************** RETURN ENDS *******************************
     // return React.createElement('div',null,React.createElement('h1',{className: 'App'},'Hi! I\'m a React App!!!'));
@@ -140,4 +141,4 @@ componentDidUpdate(){
 //*****************************************************/
 }
 
-export default App;
+export default withClass(App, classes.App);
