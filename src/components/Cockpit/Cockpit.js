@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 
-import classes from './Cockpit.css'
+import classes from './Cockpit.css';
 
 //props.showPersons is this.state.showPersons 
 //props.persons is this.state.persons
