@@ -5,6 +5,11 @@ import classes from './Person.css';
 
 class Person extends Component {
 
+    constructor(props){
+        super(props);
+        this.inputElementRef = React.createRef();
+    }
+
     render(){
 
     //************ COMPONENT CREATION LIFECYCLE**********/
@@ -22,7 +27,8 @@ class Person extends Component {
                 <p>{this.props.children}</p>
                 
                 <input 
-                    type="text" 
+                    type="text"
+                    ref={this.inputElementRef}
                     onChange={this.props.changed} 
                     value={this.props.name}>
                 </input>
@@ -38,5 +44,9 @@ Person.propTypes = {
     age: PropTypes.number,
     change: PropTypes.func
 };
+
+componentDidMount(){
+    this.inputElementRef.current.focus();
+}
 
 export default withClass(Person, classes.Person);
