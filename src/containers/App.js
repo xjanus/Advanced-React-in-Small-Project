@@ -20,9 +20,9 @@ class App extends Component {
 
   state = {
     persons: [
-      {id: 'asfa1', name: 'Max', age: '28'},
-      {id: 'vasdf1', name: 'Manu', age: '29'},
-      {id: 'unique', name: 'Stephanie', age: '26'}
+      {id: 'asfa1', name: 'Max', age: 28},
+      {id: 'vasdf1', name: 'Manu', age: 29},
+      {id: 'unique', name: 'Stephanie', age: 26}
     ],
     otherState: 'some random value',
     showPersons: false,
