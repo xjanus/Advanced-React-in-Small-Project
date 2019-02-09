@@ -23,7 +23,8 @@ class App extends Component {
       {id: 'unique', name: 'Stephanie', age: '26'}
     ],
     otherState: 'some random value',
-    showPersons: false
+    showPersons: false,
+    showCockpit: true
   }
 
   //************ COMPONENT CREATION LIFECYCLE**********/
@@ -92,12 +93,22 @@ class App extends Component {
 
     return (
         <div className={classes.App}>
+
+          <button onClick={() => {
+            this.setState({showCockpit: false})
+            }}
+            >
+            Remove Cockpit
+          </button>
         
-          <Cockpit 
-            title={this.props.appTitle}
-            showPersons={this.state.showPersons} 
-            persons={this.state.persons}
-            clicked={this.togglePersonsHandler} />
+          {this.state.showCockpit ? 
+            ( <Cockpit 
+                title={this.props.appTitle}
+                showPersons={this.state.showPersons} 
+                persons={this.state.persons}
+                clicked={this.togglePersonsHandler} 
+            />)
+              : null} 
 
           {persons}
         

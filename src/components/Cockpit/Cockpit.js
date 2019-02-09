@@ -43,7 +43,26 @@ const cockpit = (props) => {
   }, []);
 
   //useEffect for clean-up like componentWillUnmount()}{}
+  //we return an anonymous function which will run BEFORE the main 
+  //useEffect function runs, but AFTER the first render cycle!
+  useEffect(() => {
+    console.log('[Cockpit.js], useEffect');    
+    setTimeout(() => {
+      console.log('[Cockpit.js], for clean-up');
+    }, 1000);
+    return () => {
+      console.log("[Cockpit.js], clean-up work using useEffect()");
+    }
+  }, []);
   
+  //the below useEffect is useful if you want to cancel whenever the component
+  //is re-rendered or updated
+  useEffect(() => {
+    console.log('[Cockpit.js] 2nd useEffect');
+    return () => {
+      console.log("[Cockpit.js], clean-up work using 2nd useEffect()");
+    };
+  });
 
     const assignedClasses = [];
     let btnClass = "";
