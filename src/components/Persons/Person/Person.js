@@ -11,7 +11,8 @@ class Person extends Component {
     //*****************************************************/
 
         return (
-            <Aux>
+            // <Aux>
+            <React.Fragment>
                 
                 <p onClick={this.props.click}>
                     I'm a {this.props.name}. 
@@ -25,8 +26,10 @@ class Person extends Component {
                     onChange={this.props.changed} 
                     value={this.props.name}>
                 </input>
+
+            </React.Fragment>
     
-            </Aux>
+            //</Aux>
         );
     }
 }
