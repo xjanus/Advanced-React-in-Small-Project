@@ -37,23 +37,21 @@
 
 ### The Component Lifecycle Methods Used/Studied
 
-** Mounting **
+**Mounting**
  - constructor()
  - static getDerivedStateFromProps()
  - render()
  - componentDidMount()
 
-- Updating
+**Updating**
+  - static getDerivedStateFromProps()
+  - shouldComponentUpdate()
+  - render()
+  - getSnapshotBeforeUpdate()
+  - componentDidUpdate()
 
-* static getDerivedStateFromProps()
-* shouldComponentUpdate()
-* render()
-* getSnapshotBeforeUpdate()
-* componentDidUpdate()
-
-- Unmounting
-
-* componentWillUnmount()
+**Unmounting**
+  - componentWillUnmount()
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
