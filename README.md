@@ -52,6 +52,21 @@
 
 **Unmounting**
   - componentWillUnmount()
+  
+## Getting Started and Execution
+
+* Clone this repo
+* Run npm install
+* Run npm start
+
+## Authors
+
+* **xjanus** (https://github.com/xjanus)
+
+## Acknowledgments
+
+* Maximilian Schwarzmüller's course: React: The Complete Guide [https://www.udemy.com/react-the-complete-guide-incl-redux/]
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
