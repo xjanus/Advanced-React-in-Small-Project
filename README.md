@@ -14,7 +14,7 @@
 
 # Primary React Concept Used / Studied:
 
-### HOC 
+### Higher Order Components 
   - with and without WrappedComponent parameter - [https://reactjs.org/docs/higher-order-components.html]
 
 ### CSS Modules Stylesheet
@@ -37,7 +37,7 @@
 
 ### The Component Lifecycle Methods Used/Studied
 
-Mounting
+** Mounting **
  - constructor()
  - static getDerivedStateFromProps()
  - render()
