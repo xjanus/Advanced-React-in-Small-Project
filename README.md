@@ -14,19 +14,26 @@
 
 # Primary React Concept Used / Studied:
 
-### HOC - with and without WrappedComponent parameter - [https://reactjs.org/docs/higher-order-components.html]
+### HOC 
+  - with and without WrappedComponent parameter - [https://reactjs.org/docs/higher-order-components.html]
 
-### CSS Modules Stylesheet - [https://facebook.github.io/create-react-app/docs/adding-a-css-modules-stylesheet]: CSS Modules let you use the same CSS class name in different files without worrying about naming clashes.
+### CSS Modules Stylesheet
+  - [https://facebook.github.io/create-react-app/docs/adding-a-css-modules-stylesheet]: CSS Modules let you use the same CSS class name in different files without worrying about naming clashes.
 
-### React.createContext, Context.Provider and Class.contextType - [https://reactjs.org/docs/context.html#reactcreatecontext]
+### React.createContext, Context.Provider and Class.contextType
+  - [https://reactjs.org/docs/context.html#reactcreatecontext]
 
-### React.PureComponent and React.memo - [https://reactjs.org/docs/react-api.html#reactmemo]
+### React.PureComponent and React.memo
+  - [https://reactjs.org/docs/react-api.html#reactmemo]
 
-### Typechecking with PropTypes - [https://reactjs.org/docs/typechecking-with-proptypes.html]
+### Typechecking with PropTypes
+  - [https://reactjs.org/docs/typechecking-with-proptypes.html]
 
-### Hooks - useRef, useEffect - [https://reactjs.org/docs/hooks-reference.html#useeffect]
+### Hooks - useRef, useEffect
+  - [https://reactjs.org/docs/hooks-reference.html#useeffect]
 
-### Class based Component/Stateful Components & Functional Components/Stateless Components - [https://reactjs.org/docs/react-component.html]
+### Class based Component/Stateful Components & Functional Components/Stateless Components
+  - [https://reactjs.org/docs/react-component.html]
 
 ### The Component Lifecycle Methods Used/Studied
 
