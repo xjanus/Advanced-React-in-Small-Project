@@ -30,12 +30,11 @@
 
 ### The Component Lifecycle Methods Used/Studied
 
-- Mounting
-
-* constructor()
-* static getDerivedStateFromProps()
-* render()
-* componentDidMount()
+Mounting
+ - constructor()
+ - static getDerivedStateFromProps()
+ - render()
+ - componentDidMount()
 
 - Updating
 
